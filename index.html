@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Daftar Belanja + LocalStorage</title>
+  </head>
+  <body>
+    <div class="shopping-card">
+      <h1>
+        🛒 Daftar Belanja
+        <span>LOKAL</span>
+      </h1>
+      <div class="sub">Masukkan list belanja kamu ...</div>
+
+      <!-- input area -->
+      <div class="input-panel">
+        <div class="flex-row">
+          <div class="input-wrapper">
+            <i>📝</i>
+            <input
+              type="text"
+              id="itemInput"
+              placeholder="Contoh: Telur, Susu, Roti..."
+              autofocus
+            />
+          </div>
+          <button class="btn-primary" id="addBtn" onclick="addTask()"><i>+</i> Tambah</button>
+        </div>
+      </div>
+
+      <!-- daftar dan kontrol -->
+      <div class="list-header">
+        <h2>
+          📋 Item
+          <span class="count-badge" id="itemCount">0</span>
+        </h2>
+        <button class="clear-all-btn" id="clearAllBtn" title="Hapus semua item">
+          <i>🗑️</i> Hapus Semua
+        </button>
+      </div>
+
+      <!-- container list -->
+      <ul class="shopping-list" id="shoppingList">
+        <!-- item akan di-render oleh javascript -->
+      
+      </ul>
+
+      <footer>⚡ data tersimpan di localStorage — refresh tidak hilang</footer>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- catatan: semua ikon menggunakan karakter unicode / emoji agar tidak dependensi font external -->
+  </body>
+</html>
